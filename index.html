@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <title>Program Golf Club Distance with Club Speed</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Program Golf Club Distance with Club Speed</h1>
+        
+        <div class="custom-select">
+         <label for="clubspeed">Select Your Club Speed: </label>
+         <select class="drop" name="clubspeed" id="clubspeed" onchange="enableGolfClub();">
+             <option value="0" disabled selected>Select an option</option>
+             <option value="60">60 rpm</option>
+             <option value="70">70 rpm</option>
+             <option value="80">80 rpm</option>
+             <option value="90">90 rpm</option>
+             <option value="100">100 rpm</option>
+             <option value="110">110 rpm</option>
+             <option value="120">120 rpm</option>
+             <option value="130">130 rpm</option>
+             <option value="140">140 rpm</option>
+             <option value="150">150 rpm</option>
+         </select>
+     </div>
+
+     <div class="custom-select">
+         <label for="golfclub">Select Your Golf Club: </label>
+         <select class="drop" name="golfclub" id="golfclub" disabled>
+             <option value="0" disabled selected>Select an option</option>
+             <option value="1">Driver</option>
+             <option value="2">FW3</option>
+             <option value="3">FW5</option>
+             <option value="4">Hybrid</option>
+             <option value="5">Iron2</option>
+             <option value="6">Iron3</option>
+             <option value="7">Iron4</option>
+             <option value="8">Iron5</option>
+             <option value="9">Iron6</option>
+             <option value="10">Iron7</option>
+             <option value="11">Iron8</option>
+             <option value="12">Iron9</option>
+             <option value="13">Pitching Wedge</option>
+         </select>
+     </div>
+        
+        <div class="buttonGroup">
+            <button class="buttonCheck" onclick="myFunction()">Check Distance !!</button>
+            <button class="buttonReset" type="button" onclick="resetSelect();">Reset</button>
+            <p>My distance on my golf club: <span class="output"></span></p>
+        </div>
+    </div>
+    <div id="TableClubSpeed">
+        <h1>Table Yourdistance with ClubSpeed</h1>
+        <table > <!-- style="display: none;" -->
+            <tr>
+              <th colspan="2">Golfclub</th>
+              <th>Distance (Yards)</th>
+            </tr>
+            <tr>
+              <td rowspan="4">Driver & Woods</td>
+              <td classs="t0">Driver</td>
+              <td id="Driver">0</td>
+            </tr>
+            <tr>
+               <td>FW3</td>
+               <td id="FW3">0</td>
+            </tr>
+            <tr>
+                <td>FW5</td>
+                <td id="FW5">0</td>
+             </tr>
+             <tr>
+                <td>Hybrid</td>
+                <td id="Hybrid">0</td>
+             </tr>
+             <tr>
+                <td rowspan="8">Iron</td>
+                <td>Iron2</td>
+                <td id="Iron2">0</td>
+             </tr>
+             <tr>
+                <td>Iron3</td>
+                <td id="Iron3">0</td>
+             </tr>
+             <tr>
+                <td>Iron4</td>
+                <td id="Iron4">0</td>
+             </tr>
+             <tr>
+                <td>Iron5</td>
+                <td id="Iron5">0</td>
+             </tr>
+             <tr>
+                <td>Iron6</td>
+                <td id="Iron6">0</td>
+             </tr>
+             <tr>
+                <td>Iron7</td>
+                <td id="Iron7">0</td>
+             </tr>
+             <tr>
+                <td>Iron8</td>
+                <td id="Iron8">0</td>
+             </tr>
+             <tr>
+                <td>Iron9</td>
+                <td id="Iron9">0</td>
+             </tr>
+             <tr>
+               <td>Wedge</td>
+                <td>PitchingWedge</td>
+                <td id="PW">0</td>
+             </tr>
+            
+          </table>
+          
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
